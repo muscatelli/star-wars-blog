@@ -3,7 +3,7 @@ import Card from '../components/Cards';
 //import { useState } from "react";
 
 const Home = () => {
-    const [planetas, setPlanetas] = useState([]);
+    const [planets, setPlanets] = useState([]);
     const [vehicles, setVehicles] = useState([]);
     const [people, setPeople] = useState([]);
 
@@ -13,7 +13,7 @@ const Home = () => {
             method:"GET",
             headers: {"Content-Type": "application/json"}
         }).then(response => response.json())
-        .then(data => setPlanetas(data.results))
+        .then(data => setPlanets(data.results))
     }, [])
 
     //Vehicle
@@ -24,7 +24,7 @@ const Home = () => {
         }).then(response => response.json())
         .then(data => setVehicles(data.results))
     }, [])
-
+    
     //People
     useEffect(()=> {
         fetch("https://swapi.dev/api/people/", {
@@ -34,13 +34,10 @@ const Home = () => {
             .then(data => setPeople(data.results))
         }, [])
 
-
     return (
         <>
             <h1>Cards</h1>
-        {planetas.map((planeta, i) => <Card data={planeta}/>)}
-        {vehicles.map((vehicles, i) => <Card data={vehicles}/>)}
-        {people.map((people, i) => <Card data={people}/>)}
+       <div>{planets.map((planet, i) => <Card data={planet}/>)}</div>
         
         
         </>
@@ -49,3 +46,8 @@ const Home = () => {
 
 
 export default Home;
+/*
+{vehicles.map((vehicles, i) => <Card data={vehicles}/>)}
+        {people.map((people, i) => <Card data={people}/>)}
+        
+        */
