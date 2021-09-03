@@ -14,7 +14,6 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
-
           </Route>
 
           <Route render={() => <h1>Not Found</h1>}></Route>
