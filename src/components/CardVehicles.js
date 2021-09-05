@@ -13,7 +13,7 @@ const CardVehicles = (props) => {
                 <p className="card-text">{props.data.url}</p>
                 <p className="card-text">Model: {props.data.model}</p>
                 <Link to="#" className="btn btn-primary">Learn more</Link>
-                <i class="bi bi-heart"></i>
+                <button className="btn btn-outline-warning"><i class="bi bi-heart"></i></button>
             </div>
 
         </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Card from '../components/Cards';
+import CardPlanets from '../components/CardPlanets';
 import CardVehicles from '../components/CardVehicles';
 import CardPeople from "../components/CardPeople";
 //import { useState } from "react";
@@ -41,7 +41,7 @@ const Home = () => {
             <div class="container-fluid">
                 <h1>Planets</h1>
                 <div className="scrolling-wrapper row flex-row flex-nowrap mt-3 pb-3 pt-3">
-               {planets.map((planet, i) =><div className="col-md-4"> <Card data={planet} image= "https://isccoquimbo.cl/images/400X200.gif" /></div>)}   
+               {planets.map((planet, i) =><div className="col-md-4"> <CardPlanets data={planet} image= "https://isccoquimbo.cl/images/400X200.gif" /></div>)}   
                 </div>
             </div>
 

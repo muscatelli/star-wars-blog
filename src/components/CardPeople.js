@@ -1,7 +1,7 @@
 import react from 'react';
 import { Link } from 'react-router-dom';
 
-const CardPeople  = (props) => {
+const CardPeople = (props) => {
     return (
         <div className="card">
 
@@ -15,7 +15,8 @@ const CardPeople  = (props) => {
                 <p className="card-text">Eye Color: {props.data.eye_color}</p>
                 <p className="card-text">Hair Color: {props.data.hair_color}</p>
                 <Link to="#" className="btn btn-primary">Learn more</Link>
-                <i class="bi bi-heart"></i>
+                <button className="btn btn-outline-warning"><i class="bi bi-heart"></i></button>
+
             </div>
 
         </div>

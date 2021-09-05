@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Cards = (props) => {
+const CardPlanets = (props) => {
     
 
 
@@ -17,14 +17,14 @@ const Cards = (props) => {
                 <p className="card-text">Terrain: {props.data.terrain}</p>
                 <p className="card-text">{props.data.url}</p>
                 <Link to="#" className="btn btn-primary">Learn more</Link>
-                 <i class="bi bi-heart"></i>
+                <button className="btn btn-outline-warning"><i class="bi bi-heart"></i></button>
             </div>
 
         </div>
     )
 }
 
-export default Cards;
+export default CardPlanets;
 
 
             //  {JSON.stringify(props.data)}
