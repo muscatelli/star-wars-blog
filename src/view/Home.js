@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from '../components/Cards';
+import CardVehicles from '../components/CardVehicles';
+import CardPeople from "../components/CardPeople";
 //import { useState } from "react";
 
 const Home = () => {
@@ -46,14 +48,14 @@ const Home = () => {
             <div class="container-fluid">
                 <h1>Vehicles</h1>
                 <div className="scrolling-wrapper row flex-row flex-nowrap mt-3 pb-3 pt-3">
-               {vehicles.map((vehicle, i) =><div className="col-md-4"> <Card data={vehicle} image= "https://isccoquimbo.cl/images/400X200.gif" /></div>)}   
+               {vehicles.map((vehicle, i) =><div className="col-md-4"> <CardVehicles data={vehicle} image= "https://isccoquimbo.cl/images/400X200.gif" /></div>)}   
                 </div>
             </div>
 
             <div class="container-fluid">
                 <h1>Peoples</h1>
                 <div className="scrolling-wrapper row flex-row flex-nowrap mt-3 pb-3 pt-3">
-               {people.map((people, i) =><div className="col-md-4"> <Card data={people} image= "https://isccoquimbo.cl/images/400X200.gif"/></div>)}   
+               {people.map((people, i) =><div className="col-md-4"> <CardPeople data={people} image= "https://isccoquimbo.cl/images/400X200.gif"/></div>)}   
                 </div>
             </div>
         </>
