@@ -42,14 +42,14 @@ const Home = () => {
             <div className="container-fluid">
                 <h1>Vehicles</h1>
                 <div className="scrolling-wrapper row flex-row flex-nowrap mt-3 pb-3 pt-3">
-                    {store.vehicles.map((vehicle, i) => <div className="col-md-4"> <CardPlanets data={vehicle} image="https://isccoquimbo.cl/images/400X200.gif" /></div>)}
+                    {store.vehicles.map((vehicle, i) => <div className="col-md-4"> <CardVehicles data={vehicle} image="https://isccoquimbo.cl/images/400X200.gif" /></div>)}
                 </div>
             </div>
 
             <div className="container-fluid">
                 <h1>Peoples</h1>
                 <div className="scrolling-wrapper row flex-row flex-nowrap mt-3 pb-3 pt-3">
-                    {store.peoples.map((people, i) => <div className="col-md-4"> <CardPlanets data={people} image="https://isccoquimbo.cl/images/400X200.gif" /></div>)}
+                    {store.peoples.map((people, i) => <div className="col-md-4"> <CardPeople data={people} image="https://isccoquimbo.cl/images/400X200.gif" /></div>)}
                 </div>
             </div>
 

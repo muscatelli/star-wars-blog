@@ -24,7 +24,7 @@ export const getState = ({ setStore, getStore, getActions }) => {
            },
 
            getPeoples: () => {
-            fetch("https://swapi.dev/api/planets/", {
+            fetch("https://swapi.dev/api/people/", {
                 method: "GET",
                 headers: { "Content-Type": "application/json" }
             }).then(response => response.json())

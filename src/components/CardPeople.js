@@ -16,7 +16,7 @@ const CardPeople = (props) => {
                 <p className="card-text">Eye Color: {props.data.eye_color}</p>
                 <p className="card-text">Hair Color: {props.data.hair_color}</p>
                 <Link to="#" className="btn btn-primary">Learn more</Link>
-                <button className="btn btn-outline-warning" /*onClick={actions.addFavorite}*/><i class="bi bi-heart"></i></button>
+                <button className="btn btn-outline-warning" /*onClick={}*/><i class="bi bi-heart"></i></button>
 
             </div>
 
