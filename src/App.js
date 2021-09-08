@@ -3,6 +3,7 @@ import './App.css';
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import Home from './view/Home';
 import Navbar from './components/Navbar';
+import injectContext from './store/appContext';
 
 
 function App() {
@@ -24,12 +25,5 @@ function App() {
   );
 }
 
-export default App;
+export default injectContext(App);
 
-/* return (
-    <div className="App">
-      <Navbar />
-      <Cards/>
-    </div>
-  );
-  */

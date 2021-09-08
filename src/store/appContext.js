@@ -15,15 +15,19 @@ const injectContext = PassedComponent => {
                 })
             })
         );
+        
+        useEffect(()=> {
+
+        }, [])
 
         return (
-            <Context.Provider value={state}>
+            <Context.Provider value={state}> 
                 <PassedComponent {...props} />
-            </Context.Provider>
+            </Context.Provider> 
         );
     };
 
     return StoreWrapper;
 };
 
-export default injectContext;
+export default injectContext; 
