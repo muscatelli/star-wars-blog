@@ -7,6 +7,8 @@ import injectContext from './store/appContext';
 import PlanetsInfo from './view/PlanetsInfo';
 import Peoplesinfo from './view/PeoplesInfo';
 import Planetsinfo from './view/PlanetsInfo';
+import Vehiclesinfo from './view/VehiclesInfo';
+
 
 
 function App() {
@@ -23,6 +25,9 @@ function App() {
             <PlanetsInfo />
           </Route>
           <Route exact path="/Peopleinfo/:id" component={Peoplesinfo}>
+            <Peoplesinfo />
+          </Route>
+          <Route exact path="/Vehiclesinfo/:id" component={Vehiclesinfo}>
             <Peoplesinfo />
           </Route>
           

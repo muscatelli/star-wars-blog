@@ -56,6 +56,17 @@ export const getState = ({ setStore, getStore, getActions }) => {
                 .then (data => {
                     actions.getInfo(data);
                 })
+           },
+
+           getVehiclesinfo: ( veh ) => {
+            const actions = getActions();
+            let url = 'https://swapi.dev/api/starships/' + veh;
+
+            fetch (url)
+                .then ( response => response.json())
+                .then (data => {
+                    actions.getInfo(data);
+                })
            }
   
 
