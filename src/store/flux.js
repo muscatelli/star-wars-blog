@@ -45,6 +45,17 @@ export const getState = ({ setStore, getStore, getActions }) => {
                 .then (data => {
                     actions.getInfo(data);
                 })
+           },
+
+           getPeopleinfo: ( peo ) => {
+            const actions = getActions();
+            let url = 'https://swapi.dev/api/people/' + peo;
+
+            fetch (url)
+                .then ( response => response.json())
+                .then (data => {
+                    actions.getInfo(data);
+                })
            }
   
 

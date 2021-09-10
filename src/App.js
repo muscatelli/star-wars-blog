@@ -22,11 +22,10 @@ function App() {
           <Route path="/Planetsinfo/:id" component={Planetsinfo}>
             <PlanetsInfo />
           </Route>
-
-          <Route exact path="/Peoplesinfo">
+          <Route exact path="/Peopleinfo/:id" component={Peoplesinfo}>
             <Peoplesinfo />
           </Route>
-
+          
           <Route render={() => <h1>Not Found</h1>}></Route>
         </Switch>
 

@@ -1,8 +1,12 @@
-import react from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { context } from "../store/appContext";
+import { Context } from "../store/appContext";
 
 const CardPeople = (props) => {
+
+
+    const { store, actions } = useContext(Context);
+    
     return (
         <div className="card">
 
@@ -15,7 +19,7 @@ const CardPeople = (props) => {
                 <p className="card-text">Gender: {props.data.gender}</p>
                 <p className="card-text">Eye Color: {props.data.eye_color}</p>
                 <p className="card-text">Hair Color: {props.data.hair_color}</p>
-                <Link to="#" className="btn btn-primary">Learn more</Link>
+                <Link to={`/Peopleinfo/${props.data.url.match(/\d/g)}`} className="btn btn-primary">Learn more</Link>
                 <button className="btn btn-outline-warning" /*onClick={}*/><i class="bi bi-heart"></i></button>
 
             </div>
