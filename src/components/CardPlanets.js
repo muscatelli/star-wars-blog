@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { Context } from '../store/appContext';
 
 const CardPlanets = (props) => {
     
-
+    const { store, actions } = useContext(Context);
 
 
     return (
@@ -16,7 +17,7 @@ const CardPlanets = (props) => {
                 <h5 className="card-title">{props.data.name}</h5>
                 <p className="card-text">Terrain: {props.data.terrain}</p>
                 <p className="card-text">{props.data.url}</p>
-                <Link to="#" className="btn btn-primary">Learn more</Link>
+                <Link to={`/Planetsinfo/${props.data.url.match(/\d/g)}`} className="btn btn-primary">Learn more</Link>
                 <button className="btn btn-outline-warning"><i class="bi bi-heart"></i></button>
             </div>
 
@@ -27,5 +28,4 @@ const CardPlanets = (props) => {
 export default CardPlanets;
 
 
-            //  {JSON.stringify(props.data)}
-            //{props.data.name}
+        

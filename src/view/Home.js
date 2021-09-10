@@ -4,6 +4,7 @@ import CardVehicles from '../components/CardVehicles';
 import CardPeople from "../components/CardPeople";
 import { Context } from "../store/appContext";
 
+
 const Home = () => {
 
    
@@ -52,8 +53,6 @@ const Home = () => {
                     {store.peoples.map((people, i) => <div className="col-md-4"> <CardPeople data={people} image="https://isccoquimbo.cl/images/400X200.gif" /></div>)}
                 </div>
             </div>
-
-
         </>
     );
 }
