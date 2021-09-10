@@ -17,7 +17,12 @@ const Planetsinfo = ( ) => {
         <div className="container-fluid">
                 <h1>Planets</h1>
                 <div className="mt-3 pb-3 pt-3">
-                    {store.info.name}
+               
+                <h5 className="card-title">{store.info.name}</h5>
+                <p className="card-text">{store.info.diameter}</p>
+                <p className="card-text">{store.info.population}</p>
+                <p className="card-text">{store.info.climate}</p>
+                <p className="card-text">{store.info.terrain}</p>
                  <div className="col-md-4"> </div>
                 </div>
             </div>
@@ -27,3 +32,17 @@ const Planetsinfo = ( ) => {
 
 
 export default Planetsinfo;
+
+
+
+/* 
+<div className="container-fluid">
+                <h1>Planets</h1>
+                <div className="mt-3 pb-3 pt-3">
+                    {store.info.name}
+                    {store.info.diameter}
+                 <div className="col-md-4"> </div>
+                </div>
+            </div>
+
+            */
