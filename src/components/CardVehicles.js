@@ -15,6 +15,9 @@ const CardVehicles = (props) => {
                 <h5 className="card-title">{props.data.name}</h5>
                 <p className="card-text">{props.data.url}</p>
                 <p className="card-text">Model: {props.data.model}</p>
+                <p className="card-text">Manufacturer: {props.data.manufacturer}</p>
+                <p className="card-text">Cost In Credits: {props.data.cost_in_credits}</p>
+                <p className="card-text">Passengers: {props.data.passengers}</p>
                 <Link to={`/Vehiclesinfo/${props.data.url.match(/\d/g)}`} className="btn btn-primary">Learn more</Link>
                 <button className="btn btn-outline-warning"><i class="bi bi-heart"></i></button>
             </div>
