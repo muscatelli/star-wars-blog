@@ -22,7 +22,7 @@ const CardPlanets = (props) => {
                 <p className="card-text">Orbital Period:{props.data.orbital_period}</p>
                 <p className="card-text">Population::{props.data.population}</p>
                 <p className="card-text">{props.data.url}</p>
-                <Link to={`/Planetsinfo/${props.data.url.match(/\d/g)}`} className="btn btn-primary">Learn more</Link>
+                <Link to={`/Planetsinfo/${props.data.url.match(/\d+/g)}`} className="btn btn-primary">Learn more</Link>
                 <button className="btn btn-outline-warning"><i class="bi bi-heart"></i></button>
             </div>
 

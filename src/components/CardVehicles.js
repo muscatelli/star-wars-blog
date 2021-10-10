@@ -18,7 +18,7 @@ const CardVehicles = (props) => {
                 <p className="card-text">Manufacturer: {props.data.manufacturer}</p>
                 <p className="card-text">Cost In Credits: {props.data.cost_in_credits}</p>
                 <p className="card-text">Passengers: {props.data.passengers}</p>
-                <Link to={`/Vehiclesinfo/${props.data.url.match(/\d/g)}`} className="btn btn-primary">Learn more</Link>
+                <Link to={`/Vehiclesinfo/${props.data.url.match(/\d+/g)}`} className="btn btn-primary">Learn more</Link>
                 <button className="btn btn-outline-warning"><i class="bi bi-heart"></i></button>
             </div>
 

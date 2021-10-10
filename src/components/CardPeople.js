@@ -26,7 +26,7 @@ const CardPeople = (props) => {
                 <p className="card-text">Gender: {props.data.gender}</p>
                 <p className="card-text">Eye Color: {props.data.eye_color}</p>
                 <p className="card-text">Hair Color: {props.data.hair_color}</p>
-                <Link to={`/Peopleinfo/${props.data.url.match(/\d/g)}`} className="btn btn-primary">Learn more</Link>
+                <Link to={`/Peopleinfo/${props.data.url.match(/\d+/g)}`} className="btn btn-primary">Learn more</Link>
                 <button className="bi bi-heart btn btn-warning ms-2" onClick={() => addToList()}></button>
 
             </div>
