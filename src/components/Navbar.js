@@ -19,7 +19,7 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav ms-auto btn btn-primary">
-            <li className="nav-item dropdown">
+           <li className="nav-item dropdown">
               <Link className="nav-link dropdown-toggle text-light" to="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Favorites
               </Link>
