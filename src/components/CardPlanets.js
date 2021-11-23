@@ -5,11 +5,12 @@ import { Context } from '../store/appContext';
 const CardPlanets = (props) => {
 
     const { store, actions } = useContext(Context);
+    /*
     const addToList = () => {
         let testFav = props.data.name;
         console.log(testFav);
-        actions.addFavorite(testFav);
-    }
+        actions.addFavorite(testFav); 
+    }*/
 
 
     return (
@@ -25,7 +26,7 @@ const CardPlanets = (props) => {
                 <p className="card-text">Population::{props.data.population}</p>
                 <p className="card-text">{props.data.url}</p>
                 <Link to={`/Planetsinfo/${props.data.url.match(/\d+/g)}`} className="btn btn-primary">Learn more</Link>
-                <button className="bi bi-heart btn btn-warning" onClick={(()=> addToList())}  ></button>
+                <button className="bi bi-heart btn btn-warning" onClick={()=> actions.addFavorite(props.data.name)}  ></button>
             </div>
         </div>
     )

@@ -3,18 +3,17 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import {  useContext } from "react";
 
-const Navbar = () => {
+const Navbar = (props) => {
 
   const { store, actions } = useContext(Context);
     
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/"><img src="https://www.gamerfocus.co/wp-content/uploads/2018/03/Star-Wars-Logo.png" style={{ height: "2em", margin: "auto", padding: "0px 0px 5px 0px" }} /></Link>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
+      
+        <Link className="navbar-brand" to="/">
+        <img src="https://www.gamerfocus.co/wp-content/uploads/2018/03/Star-Wars-Logo.png" style={{ height: "2em", margin: "auto", padding: "0px 0px 5px 0px" }} />
+        </Link>
 
        <div class="dropdown">
                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuClickable" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
@@ -32,8 +31,6 @@ const Navbar = () => {
                 </ul>
 
             </div> 
-       
-      </div>
     </nav>
   )
 }
