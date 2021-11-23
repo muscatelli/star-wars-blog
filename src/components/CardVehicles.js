@@ -5,6 +5,11 @@ import { Context } from '../store/appContext';
 const CardVehicles = (props) => {
 
     const { store, actions } = useContext(Context);
+    const addToList = () => {
+        let testFav = props.data.name;
+        console.log(testFav);
+        actions.addFavorite(testFav);
+    }
     return (
         <div className="card">
 
@@ -19,7 +24,7 @@ const CardVehicles = (props) => {
                 <p className="card-text">Cost In Credits: {props.data.cost_in_credits}</p>
                 <p className="card-text">Passengers: {props.data.passengers}</p>
                 <Link to={`/Vehiclesinfo/${props.data.url.match(/\d+/g)}`} className="btn btn-primary">Learn more</Link>
-                <button className="btn btn-outline-warning"><i class="bi bi-heart"></i></button>
+                <button className="bi bi-heart btn btn-warning" onClick={() => addToList()}></button>
             </div>
 
         </div>
